@@ -1,0 +1,229 @@
+
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #181824 0%, #2d1e4f 100%);
+  padding: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #181824;
+  color: #e0e0e0;
+  font-family: inherit;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.node {
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(44,0,99,0.18);
+  --border: 2px solid #6c3fcf;
+  background: linear-gradient(135deg, #23233a 0%, #2d1e4f 100%);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  min-width: 240px;
+  overflow: hidden;
+  color: #e0e0e0;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.node.is-selected {
+  box-shadow: 0 0 0 3px #a259f7, 0 10px 24px rgba(99,102,241,0.25);
+  border-color: #a259f7;
+}
+
+.node__header {
+  background: linear-gradient(90deg, #6c3fcf 0%, #a259f7 100%);
+  color: #fff;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #3a2a5d;
+}
+
+.node__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.node__title {
+  line-height: 1.2;
+}
+
+.node__body {
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.node__text {
+  margin: 0;
+  color: #c7bfff;
+  font-size: 1rem;
+}
+
+.node__field {
+  display: grid;
+  gap: 6px;
+}
+
+.node__field--inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.node__label {
+  font-size: 0.85rem;
+  color: #b39ddb;
+}
+
+.node__control {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1.5px solid #6c3fcf;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #23233a;
+  color: #e0e0e0;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.node__control:focus {
+  border-color: #a259f7;
+  box-shadow: 0 0 0 2px rgba(162,89,247,0.18);
+}
+
+.PipelineToolbar {
+  background: linear-gradient(90deg, #23233a 0%, #6c3fcf 100%);
+  padding: 24px 32px 16px 32px;
+  border-radius: 0 0 18px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 4px 16px rgba(44,0,99,0.12);
+}
+
+.PipelineToolbar button {
+  background: linear-gradient(90deg, #6c3fcf 0%, #a259f7 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px rgba(44,0,99,0.10);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.PipelineToolbar button:hover {
+  background: linear-gradient(90deg, #a259f7 0%, #6c3fcf 100%);
+  box-shadow: 0 4px 16px rgba(162,89,247,0.18);
+}
+
+.DraggableNode {
+  background: linear-gradient(135deg, #23233a 0%, #6c3fcf 100%);
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(44,0,99,0.10);
+  cursor: grab;
+  border: 2px solid #6c3fcf;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.DraggableNode:active {
+  cursor: grabbing;
+  border-color: #a259f7;
+  box-shadow: 0 4px 16px rgba(162,89,247,0.18);
+}
+
+.node {
+  --radius: 10px;
+  --shadow: 0 6px 18px rgba(0,0,0,0.08);
+  --border: 1px solid rgba(0,0,0,0.08);
+  background: #fff;
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  min-width: 220px;
+  overflow: hidden;
+}
+
+.node.is-selected {
+  box-shadow: 0 0 0 2px #6366f1, 0 10px 24px rgba(99,102,241,0.2);
+}
+
+.node__header {
+  color: #fff;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.node__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.node__title {
+  line-height: 1.2;
+}
+
+.node__body {
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.node__text {
+  margin: 0;
+  color: #334155;
+  font-size: 0.92rem;
+}
+
+.node__field {
+  display: grid;
+  gap: 4px;
+}
+
+.node__field--inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.node__label {
+  font-size: 0.75rem;
+  color: #475569;
+}
+
+.node__control {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.node__control:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99,102,241,0.15);
+}

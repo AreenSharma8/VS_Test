@@ -1,0 +1,25 @@
+VectorShift Frontend Technical Assessment - Implementation Summary
+
+Part 1: Node Abstraction
+- Created NodeBase.js as a reusable abstraction for all node types.
+- Refactored Input, Output, LLM, and Text nodes to use NodeBase.
+- Added five new node types: MathNode, DateNode, ColorNode, BooleanNode, UserNode to demonstrate flexibility.
+
+Part 2: Styling
+- Applied a unified black and purple theme across the app.
+- Styled node cards, toolbar, buttons, and controls for modern UI/UX.
+- Ensured consistent spacing, rounded corners, and interactive elements.
+
+Part 3: Text Node Logic
+- Text node auto-resizes width and height as user types.
+- Parses text for {{variable}} format and adds Handles for each variable on the left side.
+
+Part 4: Backend Integration
+- Frontend sends nodes and edges to backend /pipelines/parse endpoint on submit.
+- Backend calculates number of nodes, edges, and checks for DAG.
+- Frontend displays alert with num_nodes, num_edges, and is_dag in a user-friendly manner.
+
+Other Improvements
+- Used Zustand for global state management of nodes and edges.
+- Ensured all new node types are easily extendable and styled.
+- Improved error handling and user feedback for pipeline submission.

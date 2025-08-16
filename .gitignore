@@ -1,0 +1,34 @@
+# Node modules
+frontend/node_modules/
+
+# Build output
+frontend/build/
+
+# Logs
+*.log
+
+# Python cache and virtualenv
+backend/__pycache__/
+backend/venv/
+backend/.venv/
+
+# VS Code settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+
+# Misc
+*.pyc
+*.pyo
+*.pyd
+
+# Coverage
+coverage/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
